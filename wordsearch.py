@@ -18,10 +18,10 @@ def user_input():
     return words, name, size
 
 
-# generates a game board from the word arrays and desired size
+# generates a game board from the word list and desired size
 def generate(words, size):
     puzzle = [[' ' for col in range(size[0])] for row in range(size[1])]  # creates empty game board
-    for word in words:  # puts each word array onto the game board
+    for word in words:  # puts each word onto the game board
         direction = (0, 0)
         while direction == (0, 0):
             direction = (r.randint(-1, 1), r.randint(-1, 1))  # chooses random (x, y) direction, can't be (0, 0)
